@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px) brightness(0.6);
+    transform: scale(1.1);
+  }
+  
+  .media-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  .media-container:hover {
+    transform: scale(1.01);
+  }
+  
+  .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .control-button {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #646cff 0%, #535bf2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+    z-index: 1;
+    min-width: 150px;
+  }
+  
+  .control-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+  }
+  
+  .control-button:active {
+    transform: translateY(-1px);
+  }
+  
+  .change-button {
+    background: linear-gradient(45deg, #ff6b6b 0%, #ff8e8e 100%);
+  }
+  
+  .change-button:hover {
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  }
+  
+  /* スマートフォン向けのスタイル */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  
+    .media-container {
+      border-radius: 12px;
+      aspect-ratio: 4/3; /* モバイルでは少し縦長に */
+    }
+  
+    .controls {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 1rem;
+      gap: 0.8rem;
+    }
+  
+    .control-button {
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* 小さいスマートフォン向け */
+  @media (max-width: 320px) {
+    .container {
+      padding: 0.3rem;
+    }
+  
+    .control-button {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }

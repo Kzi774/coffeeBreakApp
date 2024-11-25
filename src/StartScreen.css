@@ -1,0 +1,84 @@
+.start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+  }
+  
+  .start-button {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.3rem;
+    background: linear-gradient(45deg, #646cff 0%, #535bf2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+    min-width: 200px;
+  }
+  
+  .start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+  }
+  
+  .start-button:active {
+    transform: translateY(-1px);
+  }
+  
+  /* スマートフォン向けのスタイル */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .start-button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      min-width: 180px;
+    }
+  }
+  
+  /* 小さいスマートフォン向け */
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .start-button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      min-width: 160px;
+    }
+  }
